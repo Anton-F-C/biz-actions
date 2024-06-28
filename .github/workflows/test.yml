@@ -1,8 +1,7 @@
-name:  Deploy
+name: Test
 on:
-  push:
-    branches:
-      - main
+  pull_request:
+    branches: [main]
 jobs:
   test:
     name: Test
@@ -14,3 +13,4 @@ jobs:
           node-version: 16.x
       - run: npm ci
       - run: npm test
+#updated file
